@@ -1,0 +1,551 @@
+[00000000013d5438] core libvlc debug: VLC media player - 2.2.4 Weatherwax
+[00000000013d5438] core libvlc debug: Copyright © 1996-2016 the VideoLAN team
+[00000000013d5438] core libvlc debug: revision 2.2.3-37-g888b7e89
+[00000000013d5438] core libvlc debug: configured with ./configure  '--enable-asdcp' 'ASDCP_CFLAGS=/usr/local/include' 'ASDCP_LIBS=/usr/local/lib/'
+[00000000013d5438] core libvlc debug: searching plug-in modules
+[00000000013d5438] core libvlc debug: loading plugins cache file /works/video_soft/vlc-2.2.4/src/.libs/vlc/plugins/plugins.dat
+[00000000013d5438] core libvlc warning: cannot read /works/video_soft/vlc-2.2.4/src/.libs/vlc/plugins/plugins.dat: No such file or directory
+[00000000013d5438] core libvlc debug: recursively browsing `/works/video_soft/vlc-2.2.4/src/.libs/vlc/plugins'
+[00000000013d5438] core libvlc debug: saving plugins cache /works/video_soft/vlc-2.2.4/src/.libs/vlc/plugins/plugins.dat
+[00000000013d5438] core libvlc debug: loading plugins cache file /works/video_soft/vlc-2.2.4/modules/plugins.dat
+[00000000013d5438] core libvlc debug: recursively browsing `/works/video_soft/vlc-2.2.4/modules'
+[00000000013d5438] core libvlc debug: saving plugins cache /works/video_soft/vlc-2.2.4/modules/plugins.dat
+[00000000013d5438] core libvlc debug: plug-ins loaded: 459 modules
+[00000000013d5438] core libvlc debug: opening config file (/home/shixinhao/.config/vlc/vlcrc)
+[00000000013d5438] core libvlc debug: translation test: code is "zh_CN"
+[00000000013d5438] core libvlc debug: CPU has capabilities MMX MMXEXT SSE SSE2 SSE3 SSSE3 SSE4.1 SSE4.2 AVX FPU 
+[00000000014bfe48] core input debug: Creating an input for '媒体库'
+[00000000014bfe48] core input debug: Input is a meta file: disabling unneeded options
+[00000000014bfe48] core input debug: using timeshift granularity of 50 MiB, in path '/tmp'
+[00000000014bfe48] core input debug: `file/xspf-open:///home/shixinhao/.local/share/vlc/ml.xspf' gives access `file' demux `xspf-open' path `/home/shixinhao/.local/share/vlc/ml.xspf'
+[00000000014bfe48] core input debug: creating demux: access='file' demux='xspf-open' location='/home/shixinhao/.local/share/vlc/ml.xspf' file='/home/shixinhao/.local/share/vlc/ml.xspf'
+[00000000014c53f8] core demux debug: looking for access_demux module matching "file": 22 candidates
+[00000000014c53f8] core demux debug: no access_demux modules matched
+[00000000014bfe48] core input debug: creating access 'file' location='/home/shixinhao/.local/share/vlc/ml.xspf', path='/home/shixinhao/.local/share/vlc/ml.xspf'
+[00000000014c53f8] core access debug: looking for access module matching "file": 23 candidates
+[00000000014c53f8] filesystem access debug: opening file `/home/shixinhao/.local/share/vlc/ml.xspf'
+[00000000014c53f8] core access debug: using access module "filesystem"
+[00000000014d9bc8] core stream debug: Using stream method for AStream*
+[00000000014d9bc8] core stream debug: starting pre-buffering
+[00000000014d9bc8] core stream debug: received first data after 0 ms
+[00000000014d9bc8] core stream debug: pre-buffering done 292 bytes in 0s - 17822 KiB/s
+[00000000014d9e28] core stream debug: looking for stream_filter module matching "any": 9 candidates
+[00000000014d9e28] core stream debug: no stream_filter modules matched
+[00000000014d9e28] core stream debug: looking for stream_filter module matching "record": 9 candidates
+[00000000014d9e28] core stream debug: using stream_filter module "record"
+[00000000014bfe48] core input debug: creating demux: access='file' demux='xspf-open' location='/home/shixinhao/.local/share/vlc/ml.xspf' file='/home/shixinhao/.local/share/vlc/ml.xspf'
+[00000000014dce28] core demux debug: looking for demux module matching "xspf-open": 66 candidates
+[00000000014dce28] xspf demux debug: using XSPF playlist reader
+[00000000014dce28] core demux debug: using demux module "playlist"
+[00000000014de0a8] core demux meta debug: looking for meta reader module matching "any": 2 candidates
+[00000000014de0a8] lua demux meta debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/meta/reader
+[00000000014de0a8] lua demux meta debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/meta/reader
+[00000000014de0a8] lua demux meta debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/meta/reader
+[00000000014de0a8] lua demux meta debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/reader/filename.lua
+[00000000014de0a8] lua demux meta debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/reader/filename.luac
+[00000000014de0a8] core demux meta debug: no meta reader modules matched
+[00000000014bfe48] core input debug: `file/xspf-open:///home/shixinhao/.local/share/vlc/ml.xspf' successfully opened
+[00000000014edea8] core xml reader debug: looking for xml reader module matching "any": 1 candidates
+[00000000014edea8] core xml reader debug: using xml reader module "xml"
+[00000000014dce28] xspf demux debug: parsed 0 tracks successfully
+[00000000014bfe48] core input debug: EOF reached
+[00000000014dce28] core demux debug: removing module "playlist"
+[00000000014d9e28] core stream debug: removing module "record"
+[00000000014c53f8] core access debug: removing module "filesystem"
+[00000000014c0708] core playlist debug: creating audio output
+[00000000014d9bc8] core audio output debug: looking for audio output module matching "any": 6 candidates
+[00000000014d9bc8] pulse audio output debug: using library version 8.0.0
+[00000000014d9bc8] pulse audio output debug:  (compiled with version 8.0.0, protocol 30)
+[00000000014d9bc8] pulse audio output debug: connected locally to unix:/run/user/1000/pulse/native as client #15
+[00000000014d9bc8] pulse audio output debug: using protocol 30, server protocol 30
+[00000000014d9bc8] pulse audio output debug: adding sink 0: alsa_output.pci-0000_02_02.0.analog-stereo (ES1371 / Creative Labs CT2518/ES1373 (AudioPCI 64V/128 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]) 模拟立体声)
+[00000000014d9bc8] core audio output debug: using audio output module "pulse"
+[00000000014c0708] core playlist debug: keeping audio output
+[00000000014c0708] core playlist debug: adding item `(null)' ( dcp:///works/Data/BHSJ-MPEG2-PCM-RAW/ )
+[00000000014ee388] core interface debug: looking for interface module matching "hotkeys,none": 18 candidates
+[00000000014ee388] core interface debug: using interface module "hotkeys"
+[00000000014eb1c8] core interface debug: looking for interface module matching "globalhotkeys,none": 18 candidates
+[00000000014eb1c8] core interface debug: using interface module "xcb_hotkeys"
+[00000000014f4088] core interface debug: looking for interface module matching "dbus,none": 18 candidates
+[00000000014f4088] dbus interface debug: listening on dbus as: org.mpris.MediaPlayer2.vlc
+[00000000014f4088] core interface debug: using interface module "dbus"
+[00000000013d5438] core libvlc: 正在以默认界面运行 vlc。使用“cvlc”可以无界面模式使用 vlc。
+[00000000014f8098] core interface debug: looking for interface module matching "any": 18 candidates
+[00007fa394000958] core input debug: Creating an input for '(null)'
+[00000000014c0708] core playlist debug: meta ok for (null), need to fetch art
+[00007fa394000ae8] core art finder debug: looking for meta fetcher module matching "any": 1 candidates
+[00007fa394000ae8] lua art finder debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/meta/fetcher
+[00007fa394000ae8] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/meta/fetcher
+[00007fa394000ae8] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher
+[00007fa394000ae8] lua art finder debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.lua
+[00007fa394000ae8] lua art finder debug: skipping script (unmatched scope) /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.lua
+[00007fa394000ae8] lua art finder debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.luac
+[00007fa394000ae8] lua art finder debug: skipping script (unmatched scope) /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.luac
+[00007fa394000ae8] core art finder debug: no meta fetcher modules matched
+[00007fa394000ae8] core art finder debug: looking for meta fetcher module matching "any": 1 candidates
+[00007fa394000ae8] lua art finder debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/meta/fetcher
+[00007fa394000ae8] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/meta/fetcher
+[00007fa394000ae8] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher
+[00007fa394000ae8] lua art finder debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.lua
+[00007fa394000ae8] core art finder debug: using meta fetcher module "lua"
+[00007fa394000ae8] core art finder debug: removing module "lua"
+[00000000014c0708] core playlist debug: art not found for (null)
+[00007fa3943e7f08] core generic debug: looking for extension module matching "any": 1 candidates
+[00007fa3943e7f08] lua generic debug: Opening Lua Extension module
+[00007fa3943e7f08] lua generic debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/extensions
+[00007fa3943e7f08] lua generic debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/extensions
+[00007fa3943e7f08] lua generic debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/extensions
+[00007fa3943e7f08] lua generic debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/extensions/VLSub.lua
+[00007fa3943e7f08] lua generic debug: Scanning Lua script /works/video_soft/vlc-2.2.4/share/lua/extensions/VLSub.lua
+[00007fa3943e7f08] lua generic debug: Script /works/video_soft/vlc-2.2.4/share/lua/extensions/VLSub.lua has the following capability flags: 0x5
+[00007fa3943e7f08] lua generic debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/extensions/VLSub.luac
+[00007fa3943e7f08] lua generic debug: Scanning Lua script /works/video_soft/vlc-2.2.4/share/lua/extensions/VLSub.luac
+[00007fa3943e7f08] lua generic debug: Script /works/video_soft/vlc-2.2.4/share/lua/extensions/VLSub.luac has the following capability flags: 0x5
+[00007fa3943e7f08] core generic debug: using extension module "lua"
+[00000000014f8098] core interface debug: using interface module "qt4"
+[00000000014c0708] core playlist debug: processing request item: null, node: 播放列表, skip: 0
+[00000000014c0708] core playlist debug: rebuilding array of current - root 播放列表
+[00000000014c0708] core playlist debug: rebuild done - 1 items, index -1
+[00000000014c0708] core playlist debug: starting playback of the new playlist item
+[00000000014c0708] core playlist debug: resyncing on (null)
+[00000000014c0708] core playlist debug: (null) is at 0
+[00000000014c0708] core playlist debug: creating new input thread
+[00007fa3580009b8] core input debug: Creating an input for '(null)'
+[00000000014c0708] core playlist debug: requesting art for (null)
+[00000000014f4088] dbus interface debug: Getting All properties
+[00007fa358006218] core art finder debug: looking for meta fetcher module matching "any": 1 candidates
+[00007fa3580009b8] core input debug: using timeshift granularity of 50 MiB, in path '/tmp'
+[00007fa3580009b8] core input debug: `dcp:///works/Data/BHSJ-MPEG2-PCM-RAW/' gives access `dcp' demux `' path `/works/Data/BHSJ-MPEG2-PCM-RAW/'
+[00007fa3580009b8] core input debug: specified demux `any'
+[00007fa3580009b8] core input debug: creating demux: access='dcp' demux='any' location='/works/Data/BHSJ-MPEG2-PCM-RAW/' file='/works/Data/BHSJ-MPEG2-PCM-RAW/'
+[00007fa370003c68] core demux debug: looking for access_demux module matching "dcp": 22 candidates
+[00000000014f4088] dbus interface debug: Getting All properties
+[00007fa358006218] lua art finder debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/meta/fetcher
+[00007fa358006218] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/meta/fetcher
+[00007fa358006218] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher
+[00007fa358006218] lua art finder debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.lua
+[00007fa358006218] lua art finder debug: skipping script (unmatched scope) /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.lua
+[00007fa358006218] lua art finder debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.luac
+[00007fa358006218] lua art finder debug: skipping script (unmatched scope) /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.luac
+[00007fa358006218] core art finder debug: no meta fetcher modules matched
+[00007fa358006218] core art finder debug: looking for meta fetcher module matching "any": 1 candidates
+[00007fa358006218] lua art finder debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/meta/fetcher
+[00007fa358006218] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/meta/fetcher
+[00007fa358006218] lua art finder debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher
+[00007fa358006218] lua art finder debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/fetcher/tvrage.lua
+[00007fa370003c68] dcp demux debug: parsing XML files...
+[00007fa370023f78] core xml debug: looking for xml module matching "any": 1 candidates
+[00007fa370023f78] core xml debug: using xml module "xml"
+[00007fa370003c68] core demux debug: creating access 'file' location='/works/Data/BHSJ-MPEG2-PCM-RAW/ASSETMAP', path='/works/Data/BHSJ-MPEG2-PCM-RAW/ASSETMAP'
+[00007fa3700241d8] core access debug: looking for access module matching "file": 23 candidates
+[00007fa3700241d8] filesystem access debug: opening file `/works/Data/BHSJ-MPEG2-PCM-RAW/ASSETMAP'
+[00007fa3700241d8] core access debug: using access module "filesystem"
+[00007fa370024348] core stream debug: Using stream method for AStream*
+[00007fa370024348] core stream debug: starting pre-buffering
+[00007fa370024348] core stream debug: received first data after 0 ms
+[00007fa370024348] core stream debug: pre-buffering done 1024 bytes in 0s - 142857 KiB/s
+[00007fa370c24678] core xml reader debug: looking for xml reader module matching "any": 1 candidates
+[00007fa370c24678] core xml reader debug: using xml reader module "xml"
+[00007fa370003c68] dcp demux debug: reading ASSETMAP file...
+[00007fa370c2d2c8] core xml debug: looking for xml module matching "any": 1 candidates
+[00007fa370c2d2c8] core xml debug: using xml module "xml"
+[00007fa370003c68] core demux debug: creating access 'file' location='/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_pkl.xml', path='/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_pkl.xml'
+[00007fa370c2d4e8] core access debug: looking for access module matching "file": 23 candidates
+[00007fa370c2d4e8] filesystem access debug: opening file `/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_pkl.xml'
+[00007fa370c2d4e8] core access debug: using access module "filesystem"
+[00007fa370c2d6d8] core stream debug: Using stream method for AStream*
+[00007fa370c2d6d8] core stream debug: starting pre-buffering
+[00007fa370c2d6d8] core stream debug: received first data after 0 ms
+[00007fa370c2d6d8] core stream debug: pre-buffering done 1024 bytes in 0s - 142857 KiB/s
+[00007fa37182d948] core xml reader debug: looking for xml reader module matching "any": 1 candidates
+[00007fa37182d948] core xml reader debug: using xml reader module "xml"
+[00007fa370c2d4e8] core access debug: removing module "filesystem"
+[00007fa370c2d2c8] core xml debug: removing module "xml"
+[00007fa371834f18] core xml debug: looking for xml module matching "any": 1 candidates
+[00007fa371834f18] core xml debug: using xml module "xml"
+[00007fa370003c68] core demux debug: creating access 'file' location='/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_zho_cpl.xml', path='/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_zho_cpl.xml'
+[00007fa370c2d2c8] core access debug: looking for access module matching "file": 23 candidates
+[00007fa370c2d2c8] filesystem access debug: opening file `/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_zho_cpl.xml'
+[00007fa370c2d2c8] core access debug: using access module "filesystem"
+[00007fa370c2d4b8] core stream debug: Using stream method for AStream*
+[00007fa370c2d4b8] core stream debug: starting pre-buffering
+[00007fa370c2d4b8] core stream debug: received first data after 0 ms
+[00007fa370c2d4b8] core stream debug: pre-buffering done 1024 bytes in 0s - 142857 KiB/s
+[00007fa37182d748] core xml reader debug: looking for xml reader module matching "any": 1 candidates
+[00007fa37182d748] core xml reader debug: using xml reader module "xml"
+[00007fa370c2d2c8] core access debug: removing module "filesystem"
+[00007fa371834f18] core xml debug: removing module "xml"
+[00007fa371834f18] core xml debug: looking for xml module matching "any": 1 candidates
+[00007fa371834f18] core xml debug: using xml module "xml"
+[00007fa370003c68] core demux debug: creating access 'file' location='/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_zho_cpl.xml', path='/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_zho_cpl.xml'
+[00007fa371834778] core access debug: looking for access module matching "file": 23 candidates
+[00007fa371834778] filesystem access debug: opening file `/works/Data/BHSJ-MPEG2-PCM-RAW/BHSJ-MPEG2-PCM-RAW_zho_cpl.xml'
+[00007fa371834778] core access debug: using access module "filesystem"
+[00007fa371834918] core stream debug: Using stream method for AStream*
+[00007fa371834918] core stream debug: starting pre-buffering
+[00007fa371834918] core stream debug: received first data after 0 ms
+[00007fa371834918] core stream debug: pre-buffering done 1024 bytes in 0s - 166666 KiB/s
+[00007fa37182d2d8] core xml reader debug: looking for xml reader module matching "any": 1 candidates
+[00007fa37182d2d8] core xml reader debug: using xml reader module "xml"
+[00007fa371834778] core access debug: removing module "filesystem"
+[00007fa371834f18] core xml debug: removing module "xml"
+[00007fa370003c68] dcp demux debug: Video Track: 1_reel1_video.mxf
+[00007fa370003c68] dcp demux debug: Entry point: 0
+[00007fa370003c68] dcp demux debug: Audio Track: 1_reel1_audio.mxf
+[00007fa370003c68] dcp demux debug: Entry point: 0
+[00007fa3700241d8] core access debug: removing module "filesystem"
+[00007fa370023f78] core xml debug: removing module "xml"
+[00007fa370003c68] dcp demux debug: parsing XML files done
+[00007fa358006218] core art finder debug: using meta fetcher module "lua"
+[00007fa358006218] core art finder debug: removing module "lua"
+[00000000013d5438] core libvlc debug: art not found for (null)
+[00007fa3580009b8] core input debug: selecting program id=0
+[00007fa370003c68] core demux debug: using access_demux module "dcp"
+[00007fa370003c68] dcp demux warning: Unknown query 5 in DCP Control
+[00007fa370003c68] dcp demux warning: Unknown query 15 in DCP Control
+[00007fa370003c68] dcp demux warning: Unknown query 14 in DCP Control
+[00007fa370003c68] dcp demux warning: Unknown query 11 in DCP Control
+[00007fa3701407b8] core decoder debug: looking for decoder module matching "any": 44 candidates
+[00007fa3701407b8] avcodec decoder debug: CPU flags: 0x010153db
+[00007fa3701407b8] avcodec decoder debug: trying to use direct rendering
+[00007fa3701407b8] avcodec decoder debug: allowing 1 thread(s) for decoding
+[00007fa3701407b8] avcodec decoder debug: avcodec codec (MPEG-1/2 Video) started
+[00007fa3701407b8] core decoder debug: using decoder module "avcodec"
+[00007fa3700f3808] core decoder debug: looking for decoder module matching "any": 44 candidates
+[00007fa3700f3808] araw decoder debug: samplerate:48000Hz channels:6 bits/sample:24
+[00007fa3700f3808] core decoder debug: using decoder module "araw"
+[00007fa370003c68] dcp demux warning: Unknown query 8 in DCP Control
+[00007fa370003c68] dcp demux warning: Unknown query 12 in DCP Control
+[00007fa370003c68] dcp demux warning: Unknown query 13 in DCP Control
+[00007fa3700f4348] core demux meta debug: looking for meta reader module matching "any": 2 candidates
+[00007fa3700f4348] lua demux meta debug: Trying Lua scripts in /home/shixinhao/.local/share/vlc/lua/meta/reader
+[00007fa3700f4348] lua demux meta debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/src/.libs/vlc/lua/meta/reader
+[00007fa3700f4348] lua demux meta debug: Trying Lua scripts in /works/video_soft/vlc-2.2.4/share/lua/meta/reader
+[00007fa3700f4348] lua demux meta debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/reader/filename.lua
+[00000000014f8098] qt4 interface debug: IM: Setting an input
+[00007fa3700f4348] lua demux meta debug: Trying Lua playlist script /works/video_soft/vlc-2.2.4/share/lua/meta/reader/filename.luac
+[00007fa3700f4348] core demux meta debug: no meta reader modules matched
+[00007fa3580009b8] core input debug: `dcp:///works/Data/BHSJ-MPEG2-PCM-RAW/' successfully opened
+[00007fa3580009b8] core input error: Invalid PCR value in ES_OUT_SET_(GROUP_)PCR !
+[00007fa3701407b8] avcodec decoder debug: available hardware decoder output format 16 (xvmcidct)
+[00007fa3701407b8] avcodec decoder debug: available hardware decoder output format 38 (vdpau_mpeg2)
+[00007fa3701407b8] avcodec decoder debug: available hardware decoder output format 109 (vdpau)
+[00007fa3701407b8] avcodec decoder debug: available hardware decoder output format 53 (vaapi_vld)
+[00007fa3701407b8] avcodec decoder debug: available software decoder output format 0 (yuv420p)
+[00007fa374008438] core generic debug: looking for hw decoder module matching "any": 4 candidates
+Failed to open VDPAU backend libvdpau_nvidia.so: 无法打开共享对象文件: 没有那个文件或目录
+[00007fa374008438] core generic debug: no hw decoder modules matched
+[00007fa37403e6b8] core spu text debug: looking for text renderer module matching "any": 3 candidates
+[00007fa37403e6b8] freetype spu text debug: Building font databases.
+[00007fa37403e6b8] freetype spu text debug: Took 0 microseconds
+[00007fa3580009b8] core input debug: Buffering 0%
+[00000000014c0708] core playlist debug: reusing audio output
+[00000000014d9bc8] pulse audio output debug: using surround-51 channel map
+[00007fa3580009b8] core input debug: Buffering 13%
+[00007fa3580009b8] core input debug: Buffering 27%
+[00007fa3580009b8] core input debug: Buffering 41%
+[00007fa3580009b8] core input debug: Buffering 55%
+[00007fa3580009b8] core input debug: Buffering 69%
+[00007fa3580009b8] core input debug: Buffering 83%
+[00007fa3580009b8] core input debug: Buffering 97%
+[00007fa3580009b8] core input debug: Stream buffering done (333 ms in 11 ms)
+[00007fa37403e6b8] freetype spu text debug: Using Serif Bold as font from file /usr/share/fonts/opentype/noto/NotoSansCJK.ttc
+[00007fa37403e6b8] freetype spu text debug: Using Monospace as mono-font from file /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+[00007fa37403e6b8] freetype spu text debug: using fontsize: 2
+[00007fa37403e6b8] core spu text debug: using text renderer module "freetype"
+[00007fa374136198] core scale debug: looking for video filter2 module matching "any": 63 candidates
+[00007fa374136198] swscale scale debug: 32x32 (32x32) chroma: YUVA -> 16x16 (16x16) chroma: RGBA with scaling using Bicubic (good quality)
+[00007fa374136198] core scale debug: using video filter2 module "swscale"
+[00007fa3741681b8] core scale debug: looking for video filter2 module matching "any": 63 candidates
+[00007fa3741681b8] yuvp scale debug: YUVP to YUVA converter
+[00007fa3741681b8] core scale debug: using video filter2 module "yuvp"
+[00007fa374017c68] core video output debug: Deinterlacing available
+[00007fa374017c68] core video output debug: deinterlace 0, mode blend, is_needed 0
+[00007fa374017c68] core video output debug: Opening vout display wrapper
+[00007fa38401e868] core vout display debug: looking for vout display module matching "any": 12 candidates
+[00007fa38401e618] core window debug: looking for vout window xid module matching "qt4,any": 4 candidates
+[00007fa38401e618] qt4 window debug: requesting video window...
+[00000000014f8098] qt4 interface debug: Video was requested 0, 0
+[00007fa38401e618] core window debug: using vout window xid module "qt4"
+[00007fa38401e778] core inhibit debug: looking for inhibit module matching "any": 2 candidates
+[00007fa38401e778] dbus_screensaver inhibit debug: found service org.freedesktop.ScreenSaver
+[00007fa38401e778] core inhibit debug: using inhibit module "dbus_screensaver"
+[00007fa38401e868] xcb vout display debug: connected to X11.0 server
+[00007fa38401e868] xcb vout display debug:  vendor : The X.Org Foundation
+[00007fa38401e868] xcb vout display debug:  version: 11803000
+[00007fa38401e868] xcb vout display debug: using screen 0x1c5
+Failed to open VDPAU backend libvdpau_nvidia.so: 无法打开共享对象文件: 没有那个文件或目录
+[00007fa38401e868] vdpau_display vout display debug: device creation failure: error 1
+[00007fa374017c68] core video output debug: Reusing previous vout window
+[00007fa38401e868] xcb vout display debug: connected to X11.0 server
+[00007fa38401e868] xcb vout display debug:  vendor : The X.Org Foundation
+[00007fa38401e868] xcb vout display debug:  version: 11803000
+[00007fa38401e868] xcb vout display debug: using screen 0x1c5
+[00007fa38401e868] xcb_xv vout display debug: using XVideo extension v2.2
+[00007fa38401e868] xcb_xv vout display debug: using adaptor XA G3D Textured Video
+[00007fa38401e868] xcb_xv vout display debug: using port 98
+[00007fa38401e868] xcb_xv vout display debug: using image format 0x32315659
+[00007fa38401e868] xcb_xv vout display debug: using X11 visual ID 0x21 (depth: 24)
+[00007fa38401e868] xcb_xv vout display debug: using X11 window 0x03400000
+[00007fa38401e868] xcb_xv vout display debug: using X11 graphic context 0x03400002
+[00007fa38401e868] core vout display debug: VoutDisplayEvent 'fullscreen' 0
+[00007fa38401e868] core vout display debug: VoutDisplayEvent 'resize' 1920x1080 window
+[00007fa38401e868] core vout display debug: using vout display module "xcb_xv"
+[00007fa38401e868] core vout display debug: A filter to adapt decoder to display is needed
+[00007fa3840282b8] core filter debug: looking for video filter2 module matching "any": 63 candidates
+[00007fa3840282b8] swscale filter debug: 1920x1080 (1920x1088) chroma: I420 -> 1920x1080 (1920x1080) chroma: I420 with scaling using Bicubic (good quality)
+[00007fa3840282b8] core filter debug: using video filter2 module "swscale"
+[00007fa38401e868] core vout display debug: Filter 'Swscale' (0x7fa3840282b8) appended to chain
+[00007fa374017c68] core video output debug: original format sz 1920x1088, of (0,0), vsz 1920x1080, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+[00007fa37403e6b8] core spu text debug: removing module "freetype"
+[00007fa37403e6b8] core spu text debug: looking for text renderer module matching "any": 3 candidates
+[00007fa37403e6b8] freetype spu text debug: Building font databases.
+[00007fa37403e6b8] freetype spu text debug: Took 0 microseconds
+[00007fa37403e6b8] freetype spu text debug: Using Serif Bold as font from file /usr/share/fonts/opentype/noto/NotoSansCJK.ttc
+[00007fa37403e6b8] freetype spu text debug: Using Monospace as mono-font from file /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+[00007fa37403e6b8] freetype spu text debug: using fontsize: 2
+[00007fa37403e6b8] core spu text debug: using text renderer module "freetype"
+[00000000014d9bc8] pulse audio output debug: changed buffer metrics: maxlength=4194312, tlength=207312, prebuf=0, minreq=46080
+[00000000014d9bc8] pulse audio output debug: connected to sink alsa_output.pci-0000_02_02.0.analog-stereo
+[00000000014d9bc8] core audio output debug: output 'f32l' 48000 Hz 3F2R/LFE frame=1 samples/24 bytes
+[00007fa37c008098] core volume debug: looking for audio volume module matching "any": 2 candidates
+[00007fa37c008098] core volume debug: using audio volume module "float_mixer"
+[00000000014d9bc8] core audio output debug: input 's32l' 48000 Hz 3F2R/LFE frame=1 samples/24 bytes
+[00007fa37c00cda8] core audio filter debug: looking for audio filter module matching "scaletempo": 14 candidates
+[00007fa37c00cda8] scaletempo audio filter debug: format: 48000 rate, 6 nch, 4 bps, fl32
+[00007fa37c00cda8] scaletempo audio filter debug: params: 30 stride, 0.200 overlap, 14 search
+[00007fa37c00cda8] scaletempo audio filter debug: 1.000 scale, 1440.000 stride_in, 1440 stride_out, 1152 standing, 288 overlap, 672 search, 2400 queue, fl32 mode
+[00007fa37c00cda8] core audio filter debug: using audio filter module "scaletempo"
+[00000000014d9bc8] core audio output debug: conversion: 's32l'->'f32l' 48000 Hz->48000 Hz 3F2R/LFE->3F2R/LFE
+[00007fa37c0223a8] core audio converter debug: looking for audio converter module matching "any": 12 candidates
+[00000000014d9bc8] pulse audio output debug: changing sink 0: alsa_output.pci-0000_02_02.0.analog-stereo (ES1371 / Creative Labs CT2518/ES1373 (AudioPCI 64V/128 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]) 模拟立体声)
+[00007fa37c0223a8] audio_format audio converter debug: s32l->f32l, bits per sample: 32->32
+[00007fa37c0223a8] core audio converter debug: using audio converter module "audio_format"
+[00000000014d9bc8] core audio output debug: conversion pipeline complete
+[00000000014d9bc8] core audio output debug: conversion: 'f32l'->'f32l' 48000 Hz->48000 Hz 3F2R/LFE->3F2R/LFE
+[00000000014d9bc8] core audio output debug: conversion pipeline complete
+[00007fa37c0285f8] core audio resampler debug: looking for audio resampler module matching "any": 3 candidates
+[00007fa37c0285f8] core audio resampler debug: using audio resampler module "samplerate"
+[00007fa3700f3808] core decoder debug: End of audio preroll
+[00007fa38401e868] xcb vout display debug: display is visible
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] core decoder debug: End of video preroll
+[00007fa3701407b8] core decoder debug: Received first picture
+[00007fa3580009b8] core input debug: Decoder wait done in 250 ms
+[00000000014d9bc8] pulse audio output debug: cannot synchronize start
+[00000000014d9bc8] pulse audio output debug: deferring start (7126 us)
+[00000000014d9bc8] pulse audio output debug: starting deferred
+[00000000014d9bc8] pulse audio output debug: started
+[00000000014d9bc8] pulse audio output debug: underflow
+[00000000014d9bc8] pulse audio output debug: changing sink 0: alsa_output.pci-0000_02_02.0.analog-stereo (ES1371 / Creative Labs CT2518/ES1373 (AudioPCI 64V/128 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]) 模拟立体声)
+[00000000014d9bc8] pulse audio output debug: underflow
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] pulse audio output debug: underflow
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] core audio output warning: playback too late (81570): up-sampling
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] core audio output warning: timing screwed (drift: 176022 us): stopping resampling
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00000000014d9bc8] core audio output warning: playback way too late (190387): flushing buffers
+[00000000014d9bc8] pulse audio output debug: write index corrupt
+[00000000014d9bc8] pulse audio output debug: cannot synchronize start
+[00000000014d9bc8] pulse audio output debug: deferring start (440121 us)
+[00000000014d9bc8] pulse audio output debug: write index corrupt
+[00000000014d9bc8] pulse audio output debug: cannot synchronize start
+[00000000014d9bc8] pulse audio output debug: deferring start (439863 us)
+[00000000014d9bc8] pulse audio output debug: deferring start (65017 us)
+[00000000014d9bc8] pulse audio output debug: deferring start (64986 us)
+[00000000014d9bc8] pulse audio output debug: deferring start (64967 us)
+[00000000014d9bc8] pulse audio output debug: deferring start (64955 us)
+[00000000014d9bc8] pulse audio output debug: changing sink 0: alsa_output.pci-0000_02_02.0.analog-stereo (ES1371 / Creative Labs CT2518/ES1373 (AudioPCI 64V/128 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]) 模拟立体声)
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00000000014d9bc8] pulse audio output debug: deferring start (58903 us)
+[00000000014d9bc8] pulse audio output debug: deferring start (38034 us)
+[00000000014d9bc8] pulse audio output debug: deferring start (27847 us)
+[00000000014d9bc8] pulse audio output debug: starting deferred
+[00000000014d9bc8] core audio output warning: playback way too early (-245381): playing silence
+[00000000014d9bc8] core audio output debug: inserting 11778 zeroes
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] pulse audio output debug: started
+[00000000014d9bc8] pulse audio output debug: underflow
+[00000000014d9bc8] pulse audio output debug: changing sink 0: alsa_output.pci-0000_02_02.0.analog-stereo (ES1371 / Creative Labs CT2518/ES1373 (AudioPCI 64V/128 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]) 模拟立体声)
+[00000000014d9bc8] core audio output warning: playback way too early (-249712): playing silence
+[00000000014d9bc8] core audio output debug: inserting 11986 zeroes
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] core audio output warning: playback too early (-42884): down-sampling
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00000000014d9bc8] core audio output warning: timing screwed (drift: -88368 us): stopping resampling
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00000000014d9bc8] core audio output warning: playback too early (-94242): down-sampling
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa38401e868] core vout display debug: auto hiding mouse cursor
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] core audio output warning: playback too late (67385): up-sampling
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00000000014d9bc8] core audio output debug: resampling stopped (drift: 109896 us)
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa38401e868] core vout display debug: VoutDisplayEvent 'resize' 1366x595 window
+[00000000014d9bc8] core audio output warning: playback too late (107667): up-sampling
+[00007fa38401e868] xcb vout display debug: display is visible
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa38401e868] core vout display debug: auto hiding mouse cursor
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00007fa3701407b8] avcodec decoder debug: enabling direct rendering
+[00007fa3701407b8] avcodec decoder warning: plane 0 not aligned
+[00007fa3701407b8] avcodec decoder warning: disabling direct rendering
+[00000000013d5438] core libvlc debug: exiting
+[00000000013d5438] core libvlc debug: removing all interfaces
+[00000000013d5438] core libvlc debug: exiting
+[00000000014f8098] core interface debug: removing module "qt4"
+[00000000014c0708] core playlist debug: deactivating the playlist
+[00000000014c0708] core playlist debug: incoming request - stopping current input
+[00007fa3580009b8] core input debug: control: stopping input
+[00000000014c0708] core playlist debug: incoming request - stopping current input
+[00000000014c0708] core playlist debug: finished input
+[00007fa3701407b8] core decoder debug: removing module "avcodec"
+[00007fa3701407b8] avcodec decoder debug: ffmpeg codec (MPEG-1/2 Video) stopped
+[00007fa3701407b8] core decoder debug: killing decoder fourcc `mpgv', 0 PES in FIFO
+[00000000014c0708] core playlist debug: saving a free vout
+[00000000014c0708] core playlist debug: reusing provided vout
+[00007fa374017c68] qt4 video output debug: Qt: Fullscreen state changed
+[00007fa3700f3808] core decoder debug: removing module "araw"
+[00007fa3700f3808] core decoder debug: killing decoder fourcc `s24l', 0 PES in FIFO
+[00000000014d9bc8] pulse audio output debug: changing sink 0: alsa_output.pci-0000_02_02.0.analog-stereo (ES1371 / Creative Labs CT2518/ES1373 (AudioPCI 64V/128 / Creative CT4810/CT5803/CT5806 [Sound Blaster PCI]) 模拟立体声)
+[00007fa37c0285f8] core audio resampler debug: removing module "samplerate"
+[00007fa37c0223a8] core audio converter debug: removing module "audio_format"
+[00007fa37c00cda8] core audio filter debug: removing module "scaletempo"
+[00007fa37c008098] core volume debug: removing module "float_mixer"
+[00000000014c0708] core playlist debug: keeping audio output
+[00007fa370003c68] core demux debug: removing module "dcp"
+[00007fa3580009b8] core input debug: Program doesn't contain anymore ES
+[00000000014c0708] core playlist debug: incoming request - stopping current input
+[00000000014c0708] core playlist debug: dead input
+[00000000014d9bc8] core audio output debug: removing module "pulse"
+[00007fa374017c68] core video output debug: destroying useless vout
+[00007fa38401e868] core vout display debug: Filter 0x7fa3840282b8 removed from chain
+[00007fa3840282b8] core filter debug: removing module "swscale"
+[00007fa38401e868] core vout display debug: removing module "xcb_xv"
+[00007fa38401e778] dbus_screensaver inhibit debug: got cookie 427430144
+[00007fa38401e778] core inhibit debug: removing module "dbus_screensaver"
+[00007fa38401e618] qt4 window debug: releasing video...
+[00000000014f8098] qt4 interface debug: IM: Deleting the input
+[00000000014f8098] qt4 interface debug: Video is not needed anymore
+[00007fa37403e6b8] core spu text debug: removing module "freetype"
+[00007fa3741681b8] core scale debug: removing module "yuvp"
+[00007fa374136198] core scale debug: removing module "swscale"
+[00000000014f8098] qt4 interface debug: requesting exit...
+[00000000014f8098] qt4 interface debug: waiting for UI thread...
+[00000000014f8098] qt4 interface debug: QApp exec() finished
+[00000000014f8098] qt4 interface debug: Video is not needed anymore
+[00000000014f8098] qt4 interface debug: Killing extension dialog provider
+[00000000014f8098] qt4 interface debug: ExtensionsDialogProvider is quitting...
+[00007fa3943e7f08] core generic debug: removing module "lua"
+[00007fa3943e7f08] lua generic debug: Deactivating all loaded extensions
+[00007fa3943e7f08] lua generic debug: All extensions are now deactivated
+[00000000014f4088] core interface debug: removing module "dbus"
+[00000000014eb1c8] core interface debug: removing module "xcb_hotkeys"
+[00000000014ee388] core interface debug: removing module "hotkeys"
+[00000000014c0708] core playlist debug: destroying
+[00000000013e9b48] core playlist export debug: saving 媒体库 to file /home/shixinhao/.local/share/vlc/ml.xspf.tmp13748
+[00000000013e9b48] core playlist export debug: looking for playlist export module matching "export-xspf": 4 candidates
+[00000000013e9b48] core playlist export debug: using playlist export module "export"
+[00000000013e9b48] core playlist export debug: removing module "export"
+QObject::~QObject: Timers cannot be stopped from another thread
