@@ -9,6 +9,11 @@ AM_CPPFLAGS += -I$(srcdir)/access
 libattachment_plugin_la_SOURCES = access/attachment.c
 access_LTLIBRARIES += libattachment_plugin.la
 
+libnfsdcp_plugin_la_SOURCES = access/nfsdcp/nfsdcp.cpp
+libnfsdcp_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -I/works/dcp_soft/decm/src
+libnfsdcp_plugin_la_LIBADD = $(AM_LIBADD) -ldecm -lnfs
+access_LTLIBRARIES += libnfsdcp_plugin.la
+
 libdcp_plugin_la_SOURCES = access/dcp/dcpparser.h access/dcp/dcp.cpp access/dcp/dcpparser.cpp access/dcp/dcpdecrypt.cpp
 libdcp_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) $(ASDCP_CFLAGS)
 libdcp_plugin_la_LIBADD = $(AM_LIBADD) -lkumu $(ASDCP_LIBS)

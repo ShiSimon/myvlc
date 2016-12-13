@@ -1013,6 +1013,7 @@ LTLIBmpgatofixed32 = @LTLIBmpgatofixed32@
 LTLIBmtp = @LTLIBmtp@
 LTLIBmux_ogg = @LTLIBmux_ogg@
 LTLIBncurses = @LTLIBncurses@
+LTLIBnfsdcp = @LTLIBnfsdcp@
 LTLIBnotify = @LTLIBnotify@
 LTLIBogg = @LTLIBogg@
 LTLIBomxil = @LTLIBomxil@

@@ -1940,6 +1940,11 @@ fi
 AM_CONDITIONAL(HAVE_AVFOUNDATION, [test "${have_avfoundation}" != "no"])
 
 dnl
+dnl  NFSDCP plugin
+dnl
+VLC_ADD_PLUGIN([nfsdcp])
+
+dnl
 dnl  DCP plugin (using asdcplib)
 dnl
 PKG_WITH_MODULES([ASDCP], [asdcplib], [have_asdcp="yes"])

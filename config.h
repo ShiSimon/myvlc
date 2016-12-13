@@ -59,7 +59,7 @@
 #define CAN_COMPILE_SSSE3 1
 
 /* The ./configure command line */
-#define CONFIGURE_LINE "./configure  '--enable-asdcp' 'ASDCP_CFLAGS=/usr/local/include' 'ASDCP_LIBS=/usr/local/lib/'"
+#define CONFIGURE_LINE "./configure  '--enable-asdcp' 'ASDCP_CFLAGS=-I/usr/local/include' 'ASDCP_LIBS=-lasdcp'"
 
 /* Copyright string */
 #define COPYRIGHT_MESSAGE "Copyright © 1996-2016 the VideoLAN team"

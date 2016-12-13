@@ -1210,6 +1210,10 @@ libmtp_plugin_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(libmtp_plugin_la_CFLAGS) $(CFLAGS) \
 	$(libmtp_plugin_la_LDFLAGS) $(LDFLAGS) -o $@
+libnfsdcp_plugin_la_DEPENDENCIES =
+am_libnfsdcp_plugin_la_OBJECTS =  \
+	access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo
+libnfsdcp_plugin_la_OBJECTS = $(am_libnfsdcp_plugin_la_OBJECTS)
 libnotify_plugin_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_libnotify_plugin_la_OBJECTS = notify/libnotify_plugin_la-notify.lo
 libnotify_plugin_la_OBJECTS = $(am_libnotify_plugin_la_OBJECTS)
@@ -2120,9 +2124,10 @@ SOURCES = $(liba52_plugin_la_SOURCES) \
 	$(libmp4_plugin_la_SOURCES) $(libmpc_plugin_la_SOURCES) \
 	$(libmpeg_audio_plugin_la_SOURCES) \
 	$(libmpgv_plugin_la_SOURCES) $(libmtp_plugin_la_SOURCES) \
-	$(libnotify_plugin_la_SOURCES) $(libnsc_plugin_la_SOURCES) \
-	$(libnsv_plugin_la_SOURCES) $(libnuv_plugin_la_SOURCES) \
-	$(libogg_plugin_la_SOURCES) $(libomxil_plugin_la_SOURCES) \
+	$(libnfsdcp_plugin_la_SOURCES) $(libnotify_plugin_la_SOURCES) \
+	$(libnsc_plugin_la_SOURCES) $(libnsv_plugin_la_SOURCES) \
+	$(libnuv_plugin_la_SOURCES) $(libogg_plugin_la_SOURCES) \
+	$(libomxil_plugin_la_SOURCES) \
 	$(libomxil_vout_plugin_la_SOURCES) \
 	$(libopensles_android_plugin_la_SOURCES) \
 	$(libopus_plugin_la_SOURCES) $(libos2drive_plugin_la_SOURCES) \
@@ -2281,9 +2286,10 @@ DIST_SOURCES = $(liba52_plugin_la_SOURCES) \
 	$(libmp4_plugin_la_SOURCES) $(libmpc_plugin_la_SOURCES) \
 	$(libmpeg_audio_plugin_la_SOURCES) \
 	$(libmpgv_plugin_la_SOURCES) $(libmtp_plugin_la_SOURCES) \
-	$(libnotify_plugin_la_SOURCES) $(libnsc_plugin_la_SOURCES) \
-	$(libnsv_plugin_la_SOURCES) $(libnuv_plugin_la_SOURCES) \
-	$(libogg_plugin_la_SOURCES) $(libomxil_plugin_la_SOURCES) \
+	$(libnfsdcp_plugin_la_SOURCES) $(libnotify_plugin_la_SOURCES) \
+	$(libnsc_plugin_la_SOURCES) $(libnsv_plugin_la_SOURCES) \
+	$(libnuv_plugin_la_SOURCES) $(libogg_plugin_la_SOURCES) \
+	$(libomxil_plugin_la_SOURCES) \
 	$(libomxil_vout_plugin_la_SOURCES) \
 	$(libopensles_android_plugin_la_SOURCES) \
 	$(libopus_plugin_la_SOURCES) $(libos2drive_plugin_la_SOURCES) \
@@ -2621,7 +2627,7 @@ AR = ar
 ARCH = x86_64 mmx sse sse2
 AS = as
 ASDCP_CFLAGS = -I/usr/local/include
-ASDCP_LIBS = -L/usr/local/lib/ -lkumu -lasdcp
+ASDCP_LIBS = -lasdcp
 ASM = 
 AUTOCONF = ${SHELL} /works/video_soft/vlc-2.2.4/autotools/missing autoconf
 AUTOHEADER = ${SHELL} /works/video_soft/vlc-2.2.4/autotools/missing autoheader
@@ -3097,6 +3103,7 @@ LTLIBmpgatofixed32 = libmpgatofixed32_plugin.la
 LTLIBmtp = libmtp_plugin.la
 LTLIBmux_ogg = libmux_ogg_plugin.la
 LTLIBncurses = libncurses_plugin.la
+LTLIBnfsdcp = libnfsdcp_plugin.la
 LTLIBnotify = libnotify_plugin.la
 LTLIBogg = libogg_plugin.la
 LTLIBomxil = 
@@ -3445,22 +3452,22 @@ SUFFIXES = .asm
 accessdir = $(pluginsdir)/access
 
 # RTP plugin
-access_LTLIBRARIES = libattachment_plugin.la libdcp_plugin.la \
-	libfilesystem_plugin.la libidummy_plugin.la libimem_plugin.la \
-	librar_plugin.la libsdp_plugin.la libtimecode_plugin.la \
-	libvdr_plugin.la $(am__append_6) $(am__append_10) \
-	$(am__append_11) $(am__append_12) $(am__append_13) \
-	$(am__append_14) $(am__append_15) $(LTLIBdc1394) \
-	$(LTLIBdv1394) $(LTLIBlinsys_hdsdi) $(LTLIBlinsys_sdi) \
-	$(am__append_16) libshm_plugin.la $(am__append_17) \
-	$(am__append_18) $(am__append_19) $(am__append_20) \
-	$(am__append_22) $(am__append_25) $(LTLIBrdp) $(LTLIBvnc) \
-	$(LTLIBcdda) $(LTLIBvcd) $(LTLIBvcdx) $(LTLIBdvdnav) \
-	$(LTLIBdvdread) $(LTLIBlibbluray) libaccess_bd_plugin.la \
-	$(am__append_37) $(am__append_39) $(am__append_41) \
-	$(LTLIBaccess_eyetv) libftp_plugin.la libhttp_plugin.la \
-	$(LTLIBlive555) libaccess_mms_plugin.la $(LTLIBsmb) \
-	libtcp_plugin.la libudp_plugin.la $(LTLIBsftp) \
+access_LTLIBRARIES = libattachment_plugin.la libnfsdcp_plugin.la \
+	libdcp_plugin.la libfilesystem_plugin.la libidummy_plugin.la \
+	libimem_plugin.la librar_plugin.la libsdp_plugin.la \
+	libtimecode_plugin.la libvdr_plugin.la $(am__append_6) \
+	$(am__append_10) $(am__append_11) $(am__append_12) \
+	$(am__append_13) $(am__append_14) $(am__append_15) \
+	$(LTLIBdc1394) $(LTLIBdv1394) $(LTLIBlinsys_hdsdi) \
+	$(LTLIBlinsys_sdi) $(am__append_16) libshm_plugin.la \
+	$(am__append_17) $(am__append_18) $(am__append_19) \
+	$(am__append_20) $(am__append_22) $(am__append_25) $(LTLIBrdp) \
+	$(LTLIBvnc) $(LTLIBcdda) $(LTLIBvcd) $(LTLIBvcdx) \
+	$(LTLIBdvdnav) $(LTLIBdvdread) $(LTLIBlibbluray) \
+	libaccess_bd_plugin.la $(am__append_37) $(am__append_39) \
+	$(am__append_41) $(LTLIBaccess_eyetv) libftp_plugin.la \
+	libhttp_plugin.la $(LTLIBlive555) libaccess_mms_plugin.la \
+	$(LTLIBsmb) libtcp_plugin.la libudp_plugin.la $(LTLIBsftp) \
 	$(LTLIBaccess_realrtsp) $(am__append_45) $(LTLIBgnomevfs) \
 	$(LTLIBaccess_mtp) librtp_plugin.la
 EXTRA_LTLIBRARIES = libdc1394_plugin.la libdv1394_plugin.la \
@@ -3492,6 +3499,9 @@ EXTRA_LTLIBRARIES = libdc1394_plugin.la libdv1394_plugin.la \
 
 ### Files ###
 libattachment_plugin_la_SOURCES = access/attachment.c
+libnfsdcp_plugin_la_SOURCES = access/nfsdcp/nfsdcp.cpp
+libnfsdcp_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -I/works/dcp_soft/decm/src
+libnfsdcp_plugin_la_LIBADD = $(AM_LIBADD) -ldecm -lnfs
 libdcp_plugin_la_SOURCES = access/dcp/dcpparser.h access/dcp/dcp.cpp access/dcp/dcpparser.cpp access/dcp/dcpdecrypt.cpp
 libdcp_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) $(ASDCP_CFLAGS) \
 	$(GCRYPT_CFLAGS)
@@ -6216,6 +6226,18 @@ services_discovery/libmtp_plugin_la-mtp.lo:  \
 
 libmtp_plugin.la: $(libmtp_plugin_la_OBJECTS) $(libmtp_plugin_la_DEPENDENCIES) $(EXTRA_libmtp_plugin_la_DEPENDENCIES) 
 	$(AM_V_CCLD)$(libmtp_plugin_la_LINK)  $(libmtp_plugin_la_OBJECTS) $(libmtp_plugin_la_LIBADD) $(LIBS)
+access/nfsdcp/$(am__dirstamp):
+	@$(MKDIR_P) access/nfsdcp
+	@: > access/nfsdcp/$(am__dirstamp)
+access/nfsdcp/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) access/nfsdcp/$(DEPDIR)
+	@: > access/nfsdcp/$(DEPDIR)/$(am__dirstamp)
+access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo:  \
+	access/nfsdcp/$(am__dirstamp) \
+	access/nfsdcp/$(DEPDIR)/$(am__dirstamp)
+
+libnfsdcp_plugin.la: $(libnfsdcp_plugin_la_OBJECTS) $(libnfsdcp_plugin_la_DEPENDENCIES) $(EXTRA_libnfsdcp_plugin_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(CXXLINK) -rpath $(accessdir) $(libnfsdcp_plugin_la_OBJECTS) $(libnfsdcp_plugin_la_LIBADD) $(LIBS)
 notify/libnotify_plugin_la-notify.lo: notify/$(am__dirstamp) \
 	notify/$(DEPDIR)/$(am__dirstamp)
 
@@ -7026,6 +7048,8 @@ mostlyclean-compile:
 	-rm -f access/linsys/*.lo
 	-rm -f access/mms/*.$(OBJEXT)
 	-rm -f access/mms/*.lo
+	-rm -f access/nfsdcp/*.$(OBJEXT)
+	-rm -f access/nfsdcp/*.lo
 	-rm -f access/rar/*.$(OBJEXT)
 	-rm -f access/rar/*.lo
 	-rm -f access/rtp/*.$(OBJEXT)
@@ -7181,6 +7205,7 @@ include access/mms/$(DEPDIR)/libaccess_mms_plugin_la-buffer.Plo
 include access/mms/$(DEPDIR)/libaccess_mms_plugin_la-mms.Plo
 include access/mms/$(DEPDIR)/libaccess_mms_plugin_la-mmsh.Plo
 include access/mms/$(DEPDIR)/libaccess_mms_plugin_la-mmstu.Plo
+include access/nfsdcp/$(DEPDIR)/libnfsdcp_plugin_la-nfsdcp.Plo
 include access/rar/$(DEPDIR)/librar_plugin_la-access.Plo
 include access/rar/$(DEPDIR)/librar_plugin_la-module.Plo
 include access/rar/$(DEPDIR)/librar_plugin_la-rar.Plo
@@ -9537,6 +9562,13 @@ demux/mkv/libmkv_plugin_la-mkv.lo: demux/mkv/mkv.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libmkv_plugin_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o demux/mkv/libmkv_plugin_la-mkv.lo `test -f 'demux/mkv/mkv.cpp' || echo '$(srcdir)/'`demux/mkv/mkv.cpp
 
+access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo: access/nfsdcp/nfsdcp.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libnfsdcp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo -MD -MP -MF access/nfsdcp/$(DEPDIR)/libnfsdcp_plugin_la-nfsdcp.Tpo -c -o access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo `test -f 'access/nfsdcp/nfsdcp.cpp' || echo '$(srcdir)/'`access/nfsdcp/nfsdcp.cpp
+	$(AM_V_at)$(am__mv) access/nfsdcp/$(DEPDIR)/libnfsdcp_plugin_la-nfsdcp.Tpo access/nfsdcp/$(DEPDIR)/libnfsdcp_plugin_la-nfsdcp.Plo
+#	$(AM_V_CXX)source='access/nfsdcp/nfsdcp.cpp' object='access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libnfsdcp_plugin_la_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o access/nfsdcp/libnfsdcp_plugin_la-nfsdcp.lo `test -f 'access/nfsdcp/nfsdcp.cpp' || echo '$(srcdir)/'`access/nfsdcp/nfsdcp.cpp
+
 meta_engine/libtaglib_plugin_la-taglib.lo: meta_engine/taglib.cpp
 	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libtaglib_plugin_la_CXXFLAGS) $(CXXFLAGS) -MT meta_engine/libtaglib_plugin_la-taglib.lo -MD -MP -MF meta_engine/$(DEPDIR)/libtaglib_plugin_la-taglib.Tpo -c -o meta_engine/libtaglib_plugin_la-taglib.lo `test -f 'meta_engine/taglib.cpp' || echo '$(srcdir)/'`meta_engine/taglib.cpp
 	$(AM_V_at)$(am__mv) meta_engine/$(DEPDIR)/libtaglib_plugin_la-taglib.Tpo meta_engine/$(DEPDIR)/libtaglib_plugin_la-taglib.Plo
@@ -9595,6 +9627,7 @@ clean-libtool:
 	-rm -rf access/dvb/.libs access/dvb/_libs
 	-rm -rf access/linsys/.libs access/linsys/_libs
 	-rm -rf access/mms/.libs access/mms/_libs
+	-rm -rf access/nfsdcp/.libs access/nfsdcp/_libs
 	-rm -rf access/rar/.libs access/rar/_libs
 	-rm -rf access/rtp/.libs access/rtp/_libs
 	-rm -rf access/rtsp/.libs access/rtsp/_libs
@@ -10021,6 +10054,8 @@ distclean-generic:
 	-rm -f access/linsys/$(am__dirstamp)
 	-rm -f access/mms/$(DEPDIR)/$(am__dirstamp)
 	-rm -f access/mms/$(am__dirstamp)
+	-rm -f access/nfsdcp/$(DEPDIR)/$(am__dirstamp)
+	-rm -f access/nfsdcp/$(am__dirstamp)
 	-rm -f access/rar/$(DEPDIR)/$(am__dirstamp)
 	-rm -f access/rar/$(am__dirstamp)
 	-rm -f access/rtp/$(DEPDIR)/$(am__dirstamp)
@@ -10125,7 +10160,7 @@ clean-am: clean-accessLTLIBRARIES clean-aoutLTLIBRARIES \
 	mostlyclean-am
 
 distclean: distclean-recursive
-	-rm -rf ./$(DEPDIR) access/$(DEPDIR) access/bd/$(DEPDIR) access/dcp/$(DEPDIR) access/dshow/$(DEPDIR) access/dtv/$(DEPDIR) access/dvb/$(DEPDIR) access/linsys/$(DEPDIR) access/mms/$(DEPDIR) access/rar/$(DEPDIR) access/rtp/$(DEPDIR) access/rtsp/$(DEPDIR) access/screen/$(DEPDIR) access/v4l2/$(DEPDIR) access/vcd/$(DEPDIR) access/vcdx/$(DEPDIR) access/zip/$(DEPDIR) access/zip/unzip/$(DEPDIR) arm_neon/$(DEPDIR) audio_mixer/$(DEPDIR) audio_output/$(DEPDIR) codec/$(DEPDIR) codec/avcodec/$(DEPDIR) codec/dmo/$(DEPDIR) codec/omxil/$(DEPDIR) codec/spudec/$(DEPDIR) codec/wmafixed/$(DEPDIR) demux/$(DEPDIR) demux/asf/$(DEPDIR) demux/avformat/$(DEPDIR) demux/avi/$(DEPDIR) demux/mkv/$(DEPDIR) demux/mp4/$(DEPDIR) demux/mpeg/$(DEPDIR) demux/playlist/$(DEPDIR) lua/$(DEPDIR) lua/libs/$(DEPDIR) meta_engine/$(DEPDIR) mux/mpeg/$(DEPDIR) notify/$(DEPDIR) packetizer/$(DEPDIR) services_discovery/$(DEPDIR) stream_filter/$(DEPDIR) stream_filter/dash/$(DEPDIR) stream_filter/dash/adaptationlogic/$(DEPDIR) stream_filter/dash/buffer/$(DEPDIR) stream_filter/dash/http/$(DEPDIR) stream_filter/dash/mpd/$(DEPDIR) stream_filter/dash/xml/$(DEPDIR) stream_filter/smooth/$(DEPDIR) video_chroma/$(DEPDIR) video_splitter/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) access/$(DEPDIR) access/bd/$(DEPDIR) access/dcp/$(DEPDIR) access/dshow/$(DEPDIR) access/dtv/$(DEPDIR) access/dvb/$(DEPDIR) access/linsys/$(DEPDIR) access/mms/$(DEPDIR) access/nfsdcp/$(DEPDIR) access/rar/$(DEPDIR) access/rtp/$(DEPDIR) access/rtsp/$(DEPDIR) access/screen/$(DEPDIR) access/v4l2/$(DEPDIR) access/vcd/$(DEPDIR) access/vcdx/$(DEPDIR) access/zip/$(DEPDIR) access/zip/unzip/$(DEPDIR) arm_neon/$(DEPDIR) audio_mixer/$(DEPDIR) audio_output/$(DEPDIR) codec/$(DEPDIR) codec/avcodec/$(DEPDIR) codec/dmo/$(DEPDIR) codec/omxil/$(DEPDIR) codec/spudec/$(DEPDIR) codec/wmafixed/$(DEPDIR) demux/$(DEPDIR) demux/asf/$(DEPDIR) demux/avformat/$(DEPDIR) demux/avi/$(DEPDIR) demux/mkv/$(DEPDIR) demux/mp4/$(DEPDIR) demux/mpeg/$(DEPDIR) demux/playlist/$(DEPDIR) lua/$(DEPDIR) lua/libs/$(DEPDIR) meta_engine/$(DEPDIR) mux/mpeg/$(DEPDIR) notify/$(DEPDIR) packetizer/$(DEPDIR) services_discovery/$(DEPDIR) stream_filter/$(DEPDIR) stream_filter/dash/$(DEPDIR) stream_filter/dash/adaptationlogic/$(DEPDIR) stream_filter/dash/buffer/$(DEPDIR) stream_filter/dash/http/$(DEPDIR) stream_filter/dash/mpd/$(DEPDIR) stream_filter/dash/xml/$(DEPDIR) stream_filter/smooth/$(DEPDIR) video_chroma/$(DEPDIR) video_splitter/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -10177,7 +10212,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-recursive
-	-rm -rf ./$(DEPDIR) access/$(DEPDIR) access/bd/$(DEPDIR) access/dcp/$(DEPDIR) access/dshow/$(DEPDIR) access/dtv/$(DEPDIR) access/dvb/$(DEPDIR) access/linsys/$(DEPDIR) access/mms/$(DEPDIR) access/rar/$(DEPDIR) access/rtp/$(DEPDIR) access/rtsp/$(DEPDIR) access/screen/$(DEPDIR) access/v4l2/$(DEPDIR) access/vcd/$(DEPDIR) access/vcdx/$(DEPDIR) access/zip/$(DEPDIR) access/zip/unzip/$(DEPDIR) arm_neon/$(DEPDIR) audio_mixer/$(DEPDIR) audio_output/$(DEPDIR) codec/$(DEPDIR) codec/avcodec/$(DEPDIR) codec/dmo/$(DEPDIR) codec/omxil/$(DEPDIR) codec/spudec/$(DEPDIR) codec/wmafixed/$(DEPDIR) demux/$(DEPDIR) demux/asf/$(DEPDIR) demux/avformat/$(DEPDIR) demux/avi/$(DEPDIR) demux/mkv/$(DEPDIR) demux/mp4/$(DEPDIR) demux/mpeg/$(DEPDIR) demux/playlist/$(DEPDIR) lua/$(DEPDIR) lua/libs/$(DEPDIR) meta_engine/$(DEPDIR) mux/mpeg/$(DEPDIR) notify/$(DEPDIR) packetizer/$(DEPDIR) services_discovery/$(DEPDIR) stream_filter/$(DEPDIR) stream_filter/dash/$(DEPDIR) stream_filter/dash/adaptationlogic/$(DEPDIR) stream_filter/dash/buffer/$(DEPDIR) stream_filter/dash/http/$(DEPDIR) stream_filter/dash/mpd/$(DEPDIR) stream_filter/dash/xml/$(DEPDIR) stream_filter/smooth/$(DEPDIR) video_chroma/$(DEPDIR) video_splitter/$(DEPDIR)
+	-rm -rf ./$(DEPDIR) access/$(DEPDIR) access/bd/$(DEPDIR) access/dcp/$(DEPDIR) access/dshow/$(DEPDIR) access/dtv/$(DEPDIR) access/dvb/$(DEPDIR) access/linsys/$(DEPDIR) access/mms/$(DEPDIR) access/nfsdcp/$(DEPDIR) access/rar/$(DEPDIR) access/rtp/$(DEPDIR) access/rtsp/$(DEPDIR) access/screen/$(DEPDIR) access/v4l2/$(DEPDIR) access/vcd/$(DEPDIR) access/vcdx/$(DEPDIR) access/zip/$(DEPDIR) access/zip/unzip/$(DEPDIR) arm_neon/$(DEPDIR) audio_mixer/$(DEPDIR) audio_output/$(DEPDIR) codec/$(DEPDIR) codec/avcodec/$(DEPDIR) codec/dmo/$(DEPDIR) codec/omxil/$(DEPDIR) codec/spudec/$(DEPDIR) codec/wmafixed/$(DEPDIR) demux/$(DEPDIR) demux/asf/$(DEPDIR) demux/avformat/$(DEPDIR) demux/avi/$(DEPDIR) demux/mkv/$(DEPDIR) demux/mp4/$(DEPDIR) demux/mpeg/$(DEPDIR) demux/playlist/$(DEPDIR) lua/$(DEPDIR) lua/libs/$(DEPDIR) meta_engine/$(DEPDIR) mux/mpeg/$(DEPDIR) notify/$(DEPDIR) packetizer/$(DEPDIR) services_discovery/$(DEPDIR) stream_filter/$(DEPDIR) stream_filter/dash/$(DEPDIR) stream_filter/dash/adaptationlogic/$(DEPDIR) stream_filter/dash/buffer/$(DEPDIR) stream_filter/dash/http/$(DEPDIR) stream_filter/dash/mpd/$(DEPDIR) stream_filter/dash/xml/$(DEPDIR) stream_filter/smooth/$(DEPDIR) video_chroma/$(DEPDIR) video_splitter/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
